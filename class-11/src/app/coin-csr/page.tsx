@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 export default function CoinMarket() {
@@ -9,16 +10,26 @@ export default function CoinMarket() {
     fetch(`http://api.coinlayer.com/live?access_key=${API_KEY}`)
       .then((response) => response.json())
       .then((jsonConverted) => {
-        console.log("JSON Converted Data : ", jsonConverted);
         setData(jsonConverted);
       });
   }, []);
 
   return (
     <>
-      BTC: {data?.rates?.BTC}
+      <h1>Coin CSR</h1>
+      <Button variant="secondary" size="lg">
+        {" "}
+        BTC: {data?.rates?.BTC}
+      </Button>
       <br />
-      BNB: {data?.rates?.BNB}
+      <Button variant="ghost" size="lg">
+        {" "}
+        BNB: {data?.rates?.BNB}
+      </Button>
+      <Button variant="link" size="lg">
+        {" "}
+        BNB: {data?.rates?.BNB}
+      </Button>
     </>
   );
 }
