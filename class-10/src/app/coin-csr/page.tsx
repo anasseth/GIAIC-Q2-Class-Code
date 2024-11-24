@@ -14,6 +14,13 @@ export default function CoinMarket() {
       });
   }, []);
 
+
+
+
+
+
+
+
   return (
     <>
       <h1>Coin CSR</h1>
