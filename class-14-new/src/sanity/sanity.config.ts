@@ -14,3 +14,5 @@ export const SanityConfig = defineConfig({
         types: schemaTypes
     }
 })
+
+
